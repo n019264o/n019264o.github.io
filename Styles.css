@@ -7,6 +7,10 @@
         height:260px;
       }
 
+      .ReqInfo{
+            color:red;
+      }
+
       p{
         font-size:large;
       }
