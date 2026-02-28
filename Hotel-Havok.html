@@ -11,6 +11,36 @@
     <p class="ReqInfo">Genre: Endless Runner<br>Contribution: Solo Project<br> Software Used: Visual Studio, Aseprite</p>
     <p>Hotel Havok was my final project for the first year of my course at university and it was my first attempt at creating a endless runner using STL.<br> The game came out well overall and I learnt a lot about how STL worked from it.<br> I took inspiration from games like Bit.trip and Cookie Run to create the gameplay loop.</p>
     <video align="center" src="Videos//University//Hotel Havok Video Ref.mp4" alt="Video of Hotel Havok in Action" controls></video>
+    <br>
+    <div class="dropdown">Mechanics
+      <div class="dropdown-content">
+        <p>The movement mechanics at the players disposal is the key for moving forward past the obstacles. There are four different movement options; jumping, sliding, punching and pressing. These would let you get past the trolly, ladder, door and elevator respectfully. Most of the movement mechanics consisted of a simple change in sprite and a change to a Boolean value, but the jumping mechanic was more complicated than that.
+
+            The jumping mechanic required me to consider gravity and upward velocity which took me a while to wrap my head around.
+
+            void Character::Update(float deltaTime, SDL_Event e)
+            {
+            //If the current action being performed by the player is jumping, the jump velocity will be decreased by Gravity and the y position of the character is reduced by the jump velocity
+            
+            if (m_current_action == JUMPING)
+            {
+            SwapTexture("Images/Player Jump.png");
+            
+            m_jump_velocity -= GRAVITY * deltaTime;
+            
+            m_position.y -= m_jump_velocity * deltaTime;
+            
+            //Once the character's y position returns to the starting y position, the current action is set back to running and the position is set to the start positions.
+            
+            if (m_position.y > startPos.y) 
+            {
+              m_current_action = RUNNING;
+              SwapTexture("Images/Player Run.png");
+              m_position = startPos;
+            }
+	}</p>
+      </div>
+    </div>
   </body>
   
 </html>
