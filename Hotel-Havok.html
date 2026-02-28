@@ -16,31 +16,33 @@
       <div class="dropdown-content">
         <p>The movement mechanics at the players disposal is the key for moving forward past the obstacles. There are four different movement options; jumping, sliding, punching and pressing. These would let you get past the trolly, ladder, door and elevator respectfully. Most of the movement mechanics consisted of a simple change in sprite and a change to a Boolean value, but the jumping mechanic was more complicated than that.
 
-			The jumping mechanic required me to consider gravity and upward velocity which took me a while to wrap my head around.
+			<br>The jumping mechanic required me to consider gravity and upward velocity which took me a while to wrap my head around.
 			
-			void Character::Update(float deltaTime, SDL_Event e)
-			{
-			//If the current action being performed by the player is jumping, the jump velocity will be decreased by Gravity and the y position of the character is reduced by the jump velocity
+			<br>void Character::Update(float deltaTime, SDL_Event e)
+			<br>{
+			<br>//If the current action being performed by the player is jumping, the jump velocity will be decreased by Gravity and the y position of the character is reduced by the jump velocity
 			
-			if (m_current_action == JUMPING)
-			{
-				SwapTexture("Images/Player Jump.png");
+			<br>if (m_current_action == JUMPING)
+			<br>{
+			<br>	SwapTexture("Images/Player Jump.png");
 			
-				m_jump_velocity -= GRAVITY * deltaTime;
+			<br>	m_jump_velocity -= GRAVITY * deltaTime;
 			
-				m_position.y -= m_jump_velocity * deltaTime;
+			<br>	m_position.y -= m_jump_velocity * deltaTime;
 			
-			//Once the character's y position returns to the starting y position, the current action is set back to running and the position is set to the start positions.
+			<br>//Once the character's y position returns to the starting y position, the current action is set back to running and the position is set to the start positions.
 			
-			if (m_position.y > startPos.y) 
-			{
-				m_current_action = RUNNING;
-				SwapTexture("Images/Player Run.png");
-				m_position = startPos;
-			}
+			<br>if (m_position.y > startPos.y) 
+			<br>{
+			<br>	m_current_action = RUNNING;
+			<br>	SwapTexture("Images/Player Run.png");
+			<br>	m_position = startPos;
+			<br>}
 		</p>
       </div>
     </div>
+
+	<br><br><br>
   </body>
   
 </html>
