@@ -63,6 +63,28 @@
       </div>
     </div>
 
+	<div class="dropdown">Score System
+      <div class="dropdown-content" font-size="medium">
+        <p>The program also uses a score system that affects the speed at which the background and obstacles move, ensuring that the player needs to remain focused as one mistake can end their attempt. This score is increased by successfully dealing with the obstacles presented to them and all obstacles give the same amount of points.
+
+			<br>	if (m_trolly->m_position.x > m_DespawnCoord)
+			<br>	{
+			<br>	m_trolly->m_position.x -= m_speed * deltaTime;
+			<br>	/*cout << m_trolly->m_position.x << endl;*/
+			<br>	}
+			<br>	else
+			<br>	{
+			<br>		m_canSpawn = true;
+			<br>		m_trolly->m_position.x = m_startPos.x;
+			<br>		cout << "Trolly moved!\n";
+			<br>		m_spawnTimer = m_ObstCooldown;
+			<br>		m_ObjSpawned = false;
+			<br>		m_score.UpdateScore(20);
+			<br>	}
+		</p>
+      </div>
+    </div>
+
 	<br><br><br>
   </body>
   
