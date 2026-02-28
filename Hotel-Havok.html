@@ -20,24 +20,24 @@
 			
 			<br><br>void Character::Update(float deltaTime, SDL_Event e)
 			<br>{
-			<br>//If the current action being performed by the player is jumping, the jump velocity will be decreased by Gravity and the y position of the character is reduced by the jump velocity
+			<br><br>//If the current action being performed by the player is jumping, the jump velocity will be decreased by Gravity and the y position of the character is reduced by the jump velocity
 			
-			<br>if (m_current_action == JUMPING)
-			<br>{
-			<br>	SwapTexture("Images/Player Jump.png");
+			<br>	if (m_current_action == JUMPING)
+			<br>	{
+			<br>		SwapTexture("Images/Player Jump.png");
 			
-			<br>	m_jump_velocity -= GRAVITY * deltaTime;
+			<br>		m_jump_velocity -= GRAVITY * deltaTime;
 			
-			<br>	m_position.y -= m_jump_velocity * deltaTime;
+			<br>		m_position.y -= m_jump_velocity * deltaTime;
 			
-			<br>//Once the character's y position returns to the starting y position, the current action is set back to running and the position is set to the start positions.
+			<br><br>//Once the character's y position returns to the starting y position, the current action is set back to running and the position is set to the start positions.
 			
-			<br>if (m_position.y > startPos.y) 
-			<br>{
-			<br>	m_current_action = RUNNING;
-			<br>	SwapTexture("Images/Player Run.png");
-			<br>	m_position = startPos;
-			<br>}
+			<br>	if (m_position.y > startPos.y) 
+			<br>	{
+			<br>		m_current_action = RUNNING;
+			<br>		SwapTexture("Images/Player Run.png");
+			<br>		m_position = startPos;
+			<br>	}
 		</p>
       </div>
     </div>
