@@ -13,7 +13,7 @@
 
       .dropdown{
             position:relative;
-            background-color:Caramel;
+            background-color:#C68E17;
             font-size:x-large;
       }
 
@@ -26,9 +26,11 @@
          padding: 12px 16px;
       }
 
-      function myFunction() {
+      <!--
+        function myFunction() {
         document.getElementById("dropdown").innerHTML = "YOU CLICKED ME!";
-      }
+      } 
+      -->
 
       p{
         font-size:large;
