@@ -13,8 +13,17 @@
 
       .dropdown{
             position:relative;
-            background-color:ffd59a;
+            background-color:Caramel;
             font-size:x-large;
+      }
+
+      .dropdown-content{
+         display: none;
+         position: absolute;
+         background-color: white;
+         min-width: 130px;
+         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+         padding: 12px 16px;
       }
 
       function myFunction() {
